@@ -11,19 +11,30 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.artisan",
-        "onCommand:extension.artisan-migrate-fresh-seed"
+        "workspaceContains:artisan"
     ],
-    "main": "./extension",
+    "main": "./src/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.artisan",
-                "title": "php artisan"
+                "command": "artisan-terminal.artisan",
+                "title": "artisan"
             },
             {
-                "command": "extension.artisan-migrate-fresh-seed",
-                "title": "php artisan migrate:fresh --seed"
+                "command": "artisan-terminal.artisan-migrate-fresh-seed",
+                "title": "artisan migrate:fresh --seed"
+            },
+            {
+                "command": "artisan-terminal.artisan-make-controller",
+                "title": "artisan make:controller"
+            },
+            {
+                "command": "artisan-terminal.artisan-make-test",
+                "title": "artisan make:test"
+            },
+            {
+                "command": "artisan-terminal.artisan-make-unit-test",
+                "title": "artisan make:test --unit"
             }
         ]
     },
