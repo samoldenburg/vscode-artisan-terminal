@@ -6,7 +6,9 @@ function activate(context) {
     // create a terminal to run artisan commands in
     let terminal = vscode.window.createTerminal('simple-artisan');
 
+    // -------------------------
     // register artisan commands
+    // -------------------------
 
     // artisan test
     context.subscriptions.push(vscode.commands.registerCommand('extension.artisan', function () {
