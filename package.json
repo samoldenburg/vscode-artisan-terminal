@@ -33,6 +33,10 @@
                 "title": "artisan make:test"
             },
             {
+                "command": "artisan-terminal.artisan-make-migration",
+                "title": "artisan make:migration"
+            },
+            {
                 "command": "artisan-terminal.artisan-make-unit-test",
                 "title": "artisan make:test --unit"
             }

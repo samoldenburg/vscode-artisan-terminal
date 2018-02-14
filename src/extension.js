@@ -44,6 +44,19 @@ function activate(context) {
         });
     });
 
+    // php artisan make:migration
+    makeCommand('artisan-make-migration', () => {
+        vscode.window.showInputBox({ placeHolder: 'Enter Migration Name' }).then((input) => {
+            if (!input) {
+                vscode.window.showErrorMessage('You must provide a migration name!');
+                return;
+            }
+            
+            terminal.show(true);
+            terminal.sendText(`php artisan make:migration ${input}`);
+        });
+    });
+
     // php artisan make:test
     makeCommand('artisan-make-test', () => {
         vscode.window.showInputBox({ placeHolder: 'Enter Test Name' }).then((input) => {
